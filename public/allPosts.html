@@ -1,0 +1,248 @@
+<div id="allpostbody">
+	<div class="container-fluid" style="padding: 0px 0px 0px 0px;">
+		<div class="item active imgallpost">
+			<div class="row" style="padding-top:7%;color: white;">
+				<div id="text1" class="intro-text col-md-12 col-sm-12">
+					<center>
+						<p style="font-size: 38px;margin-top: 14%;font-weight: bold;">Search Travels
+                        <button class="upbutton" style="border:none;" data-toggle="modal" data-target="#myModal">New Post</button>
+                        </p>
+					</center>
+				</div>
+            </div>
+		</div>
+
+
+			<ng-include src="'nav-dark.html'"></ng-include>
+	</div>
+
+	<div class="container-fluid" style="padding: 0px 0px 0px 0px;" id="allpostcontent">
+
+		<div class="row">
+			<div class="col-md-1 col-sm-1"></div>
+			<div class="col-md-10 col-sm-10">
+			  <ul class="nav nav-tabs allpostnav">
+			    <li class="active"><a href="#all">All</a></li>
+			    <li><a href="#clothes">Clothes</a></li>
+			    <li><a href="#electronics">Electronics</a></li>
+			  </ul>
+			</div>
+			<div class="col-md-1 col-sm-1"></div>
+		</div>
+			<div class="row">
+			<div class="col-md-1 col-sm-1"></div>
+			<div class="col-md-10 col-sm-10" style="padding-top:2%;padding-bottom:2%;">
+				<form method=""  action="">
+					<center>
+					<select name="cat" id="formText">
+						<option value="" disabled selected>Categories</option>
+						<option value="">1</option>
+						<option value="">2</option>
+						<option value="">3</option>
+					</select>
+					<select name="to" id="formText">
+						<option value="" disabled selected>Traveling to</option>
+						<option value="">1</option>
+						<option value="">2</option>
+						<option value="">3</option>
+					</select>
+					<select name="from" id="formText">
+						<option value="" disabled selected>Traveling from</option>
+						<option value="">1</option>
+						<option value="">2</option>
+						<option value="">3</option>
+					</select>
+					<input type="text" name="date" id="formdate" placeholder="Date">
+					<input type="text" name="price" id="formprice" placeholder="Price">
+					<input type="submit" name="Search" id="btn" value="Search">
+					</center>
+				</form>
+			</div>
+			<div class="col-md-1 col-md-offset-1 col-sm-1 col-sm-offset-1"></div>
+		</div>		
+	</div>
+
+	<div class="container-fluid allpostpanel" id="all">
+		<div class="panel panel-default allpostpanelcontent" ng-repeat="item in posts">
+		<a href="/#/post/{{item.id}}"><div class="row">
+			<div class="col-md-8 col-sm-8">
+				<div class="row">
+					<div class="col-md-1 col-sm-1" style="padding-left:5%;padding-right:10%; margin-top: 1%;"><br><center><img src="https://sites.psu.edu/cvclab/files/2016/09/avtar-1xmju85.png" class="img-circle" width="85" height="85"></center></div>
+					<div class="col-md-3 col-sm-3" style="padding-left: 3%;"><h3 class="user" style="margin-top: 16%; font-weight: bold;">{{item.userName}}</h3><p class="user" style="margin-bottom: 0px;margin-top:10%;font-weight: bold;">{{item.userLocation}}</p></div>
+					<div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4"></div>
+					<div class="col-md-4 col-sm-4">
+						<fieldset class="rating" style="margin-top: -40%;">
+						    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+						    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+						    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+						    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+						    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+						    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+						    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+						    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+						    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+						    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+						</fieldset>
+              		</div>
+				</div>
+				<br><br><br><br><br>
+				<div class="row" style="padding-left: 5%;font-weight: bold;">
+					<div class="col-md-6 col-sm-6"><p>Traveling from</p><h2 id="allposttext" style="font-weight: bold;">{{item.travellingFrom}}</h2></div>
+					<div class="col-md-6 col-sm-6"><p>Traveling to</p><h2 id="allposttext" style="font-weight: bold;">{{item.travellingTo}}</h2></div>
+				</div>
+				<div class="row">
+					<div class="col-md-10 col-sm-10"><h3 style="margin-left:6%;margin-bottom: 4%;">{{item.travellingDate}}</h3></div>
+					<div class="col-md-1 col-sm-1" style="padding-left:0px;"><center><span class="fa fa-mobile fa-3x"></span><br><p style="margin-left: -16%;">Electronics</p></center></div>
+					<div class="col-md-1 col-sm-1"><center><img src="img/shirt.png" height="38px" width="38px" style="margin-top:-1%"><p style="margin-top: 12%; margin-left: -12%;">Clothes</p></center></div>
+					<!--<span style="background:url(icons/shirt.png);"></span>-->
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="panel panel-default rightpanel" style="min-height:100%;margin-bottom:0px;">
+					<div class="panel-body panelbody"><iframe class="apmap" src="https://www.google.com/maps/embed?q=newyork" width="385" height="331" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    <div class="panel-footer panelfooter" style="padding-bottom: 6%;"><div class="pull-right panelfootertext">$100.0</div><br></div>
+				</div>
+			</div>
+		</div></a>
+		</div>
+		<!-- <div class="panel panel-default allpostpanelcontent">
+		<div class="row">
+			<div class="col-md-8 col-sm-8">
+				<div class="row">
+					<div class="col-md-1 col-sm-1" style="padding-left:5%;padding-right:10%; margin-top: 1%;"><br><center><img src="img/image1.jpg" class="img-circle" width="85" height="85"></center></div>
+					<div class="col-md-3 col-sm-3" style="padding-left: 3%;"><h3 class="user" style="margin-top: 16%; font-weight: bold;">John Doe</h3><p class="user" style="margin-bottom: 0px;margin-top:10%;font-weight: bold;">someone@example.com</p><p class="user" style="font-weight: bold;">+92 321 4142684</p></div>
+					<div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4"></div>
+					<div class="col-md-4 col-sm-4">
+						<fieldset class="rating" style="margin-top: -40%;">
+						    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+						    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+						    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+						    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+						    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+						    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+						    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+						    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+						    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+						    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+						</fieldset>
+              		</div>
+				</div>
+				<br><br><br><br><br>
+				<div class="row" style="padding-left: 5%;font-weight: bold;">
+					<div class="col-md-6 col-sm-6"><p>Traveling from</p><h2 id="allposttext" style="font-weight: bold;">Lahore, PK</h2></div>
+					<div class="col-md-6 col-sm-6"><p>Traveling to</p><h2 id="allposttext" style="font-weight: bold;">Dubai, UAE</h2></div>
+				</div>
+				<div class="row">
+					<div class="col-md-10 col-sm-10"><h3 style="margin-left:6%;margin-bottom: 4%;">31<sup>st</sup> March 2017 - 2<sup>nd</sup> May 2017 (Tentative)</h3></div>
+					<div class="col-md-1 col-sm-1" style="padding-left:0px;"><center><span class="fa fa-mobile fa-3x"></span><br><p style="margin-left: -16%;">Electronics</p></center></div>
+					<div class="col-md-1 col-sm-1"><center><img src="img/shirt.png" height="38px" width="38px" style="margin-top:-1%"><p style="margin-top: 12%; margin-left: -12%;">Clothes</p></center></div>
+					
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4">
+				<div class="panel panel-default rightpanel" style="min-height:100%;margin-bottom:0px;">
+					<div class="panel-body panelbody"><iframe class="apmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462568.93464355526!2d54.947905702215756!3d25.074096003401515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai+-+United+Arab+Emirates!5e0!3m2!1sen!2s!4v1493302569524" width="385" height="331" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+                    <div class="panel-footer panelfooter" style="padding-bottom: 6%;"><div class="pull-right panelfootertext">$100.0</div><br></div>
+				</div>
+			</div>
+		</div>
+		</div> -->
+	</div>
+
+	</div>
+	<ng-include src="'footer-small.html'"></ng-include>
+
+
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="fa fa-times-circle-o fa-2x pull-right" data-dismiss="modal" aria-hidden="true"></button>
+        </div>
+        <div class="modal-body" id="myWizard">
+        <form>
+         <div class="tab-content">
+            <div class="tab-pane fade in active" ng-show="step1">
+              <h4 id="myModalLabel"><center id="modalh1">Create a new Post</center></h4>    
+              <center> 
+                  <input type="text" name="title" id="title" placeholder="Choose a title for your post" ng-model="post.title">
+              </center>
+              <br>
+              <center>
+                  <textarea name="description" id="description" placeholder="Add a description for your post" ng-model="post.description"></textarea>
+              </center>
+              <a class="btn btn-default pull-right" ng-click="step2f()">Next&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a><br><br><br>
+            </div>
+            <div class="tab-pane fade in active" ng-show="step2">
+               <h3 id="myModalLabel"><center id="modalh2">What can you carry?</center></h3>    
+              <center> 
+                  <select id="category" ng-model="post.category">
+                    <option value="" disabled selected>Choose Category</option>
+                    <option value="Mobile phone">I can carry a Mobile Phone</option>
+                    <option value="Laptop">I can carry a Laptop</option>
+                    <option value="Books">I can carry Books</option>
+                    <option value="Money">I can carry Money</option>
+                  </select>
+              </center>
+                  <br>
+              <center>
+                  <input type="text" name="weight" id="weight" placeholder="Max Weight" ng-model="post.weight">
+              </center>
+               <a class="btn btn-default"  ng-click="step1f()"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;Prev</a><a class="btn btn-default pull-right"  ng-click="step3f()">Next&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
+            </div>
+            <div class="tab-pane fade in active" ng-show="step3">
+              <h3 id="myModalLabel"><center id="modalh1">Add Travel Details</center></h3>    
+              <center> 
+                  <input type="text" name="destination" id="to" placeholder="Travelling to (City, Country)" ng-model="post.travellingTo">
+                  <input type="text" name="origin" id="from" placeholder="Travelling from (City, Country)" ng-model="post.travellingFrom">
+              </center>
+              <br>
+              <center> 
+                  <input type="text" name="flightNumber" id="flightNumber" placeholder="Flight Number (Optional)" ng-model="post.flightNo">
+              </center><br>
+              <center> 
+                  <input type="text" name="flightNumber" id="flightNumber" placeholder="Travel dates" ng-model="post.travellingDate">
+              </center><br>
+              <center> 
+                  <input type="text" name="flightNumber" id="flightNumber" placeholder="Charges (in US$)" ng-model="post.charges">
+              </center>
+              <br>
+              <center>
+                  <textarea name="flightDes" id="flightDes" placeholder="Any other details (Optional)" ng-model="post.otherDetails"></textarea>
+              </center>
+               <a ng-click="step2f()" class="btn btn-default" ><i class="fa fa-angle-left"></i>
+               &nbsp;&nbsp;
+               Prev</a>
+
+               <button class="btn btn-default pull-right" ng-click="makePost(post)">Post&nbsp;&nbsp;
+               <i class="fa fa-angle-right"></i></button>
+            </div>
+            <div class="tab-pane fade in active" ng-show="step4">
+              <h3 id="myModalLabel"><center id="modalh1">Congratulations</center></h3>    
+              <center><p>Your post is live and over a million users can view it!<br/><br/><br/><br/><br/></p></center>
+            </div>
+         </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){       
+		var scroll_start = 0;
+		var startchange = $('#allpostcontent');
+		var offset = startchange.offset();
+		$(document).scroll(function() { 
+			scroll_start = $(this).scrollTop();
+			if(scroll_start > offset.top) {
+				$('#navbar').css('background-color', 'black');
+			} else {
+				$('#navbar').css('background-color', 'transparent');
+			}
+		});
+	});
+</script>

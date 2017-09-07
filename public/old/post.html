@@ -1,0 +1,175 @@
+
+	<div class="container-fluid" style="padding: 0px 0px 0px 0px;">
+<ng-include src="'nav-inner.html'"></ng-include>
+	</div>
+	<div class="container-fluid" id="main">
+		<div class="row">
+			<div class="col-md-12 col-sm-12 wholebody">
+				<div class="panel panel-header spostheader">
+				<center><iframe class ="mapframe" src="https://www.google.com/maps/embed?pb=" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe></center>
+				</div>
+				<div class="row pagerow">
+					<div class="col-md-9">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12">
+						  			<ul class="nav nav-tabs">
+						    			<li class="active"><a href="#">Overview</a></li>
+						    			<li><a href="#icancarry">Reviews</a></li>
+						  			</ul>
+						  		</div>
+						  		<div class="row">
+						  			<div class="imagemobid">
+						  			<div class="col-md-1">
+						  				<center><img src="https://sites.psu.edu/cvclab/files/2016/09/avtar-1xmju85.png" id="imageid" alt="John Doe" class = "img-circle" width="90" height="99"></center>
+						  			</div>
+						  			</div>
+						  			<div class = "col-md-3">
+						  				<h3 id= "itemname" class = "itemname">{{post.userName}}</h3>
+      									<p id= "itemdescription" class= "itemdescription">{{post.userLocation}}</p>
+      								</div>
+      								<div class = "col-md-8">	
+      									<div class="stars">
+  											<form action="">
+    										<fieldset class="rating pull-left">
+								 <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+							    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+							    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+							    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+							    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+							    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+							    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+							    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+							    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+							    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>							
+							</fieldset>
+  											</form>
+										</div>
+									</div>
+						  		</div>
+						  		<div class="row">
+						  			<div class="col-md-5">
+						  				<h4 id= "travellingfrom" class="travellingfrom">Travelling From</h4>
+						  				<h2 id= "departure" class="departure">{{post.travellingFrom}}</h2>
+						  			</div>
+						  			<div class="col-md-7">
+						  				<h4 id= "travellingto" class="travellingto">Travelling To</h4>
+						  				<h2 id= "arrival" class="arrival">{{post.travellingTo}}</h2>
+						  			</div>
+						  		</div>
+						  		<br>
+						  		<!--div class="row">
+						  			<div class="col-md-5">
+						  				<h2 id= "departure" class="departure">Lahore, PK</h2>
+						  			</div>
+						  			<div class="col-md-7">
+						  				<h2 id= "arrival" class="arrival">Dubai, UAE</h2>
+						  			</div>
+						  		</div -->
+						  		<div class="row">
+						  			<center><h3 id= "tentativedates"><span class="datespan">{{post.travellingDate}}</span><br>
+						  			 						<span class="datespan">(Tentative)</span></h3></center>
+						  		</div>
+						  		<br>
+						  		<hr id="bighr" class="bighr">
+						  		<div class="row">
+						  			<div class = "col-md-3">
+						  				<h3 id= "descriptionn" class="description">Description</h3>
+						  			</div>
+						  			<div class = "col-md-9 fahad">
+						  				<h5 id= "detailsdescription" class="detailsdescription">{{post.description}}<br/>{{post.otherDetails}}</h5>
+						  			</div>
+						  		</div>
+						  		<br>
+						  		<div class="row icancarryrow">
+						  			<div class = "col-md-3">
+						  				<h3 id= "icancarry" class= "icancarry">I Can Carry</h3>
+						  			</div>
+						  			<div class = "col-md-9">
+						  				<div class="col-md-2">
+						  				<div class = "shirtid">
+							  				<center><img src="img/shirt.png" id="shirtid" alt="shirt" width="60" height="60">
+							  				<p id="clothescarry" class="clothescarry">Clothes</p></center>
+							  			</div>
+							  			</div>
+							  			<div class="col-md-2">
+							  				<center><span class = "fa fa-mobile fa-5x mobileicon1"></span>
+							  				<p id="mobileicon">Electronics</p></center>
+							  			</div>
+							  			<div class="col-md-5 col-md-offset-5">
+							  			</div>
+						  			</div>
+						  		</div>
+						  		<br>
+						  	<!-- 	<hr id="bighr" class="bighr">
+						  		
+						  		 -->
+						
+						</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-3">
+						<div class="panel priceContainer">
+							<div class="panel-heading pheading"><h4>Prices</h4>
+							<div class="row pheadrow">
+								<div class="col-md-4 col-sm-4 panelleftside">
+									<span class = "fa fa-mobile fa-5x mobileicon"></span>
+								</div>
+								<div class="col-md-8 col-sm-8 panelrightside">
+									<h4 id="electronics" class="electronics">Electronics</h4>
+									<h2 id="pricetag" class="pricetag1">${{post.charges}}</h2>
+								</div>
+							</div>
+							<div class="row pheadrow1">
+								<div class="col-md-4 col-sm-4 panelleftside">
+									<div class="shirtpic">
+									<img src="img/filledshirt.png" id="filledshirt" alt="shirt" width="60" height="60">
+									</div>
+								</div>
+								<div class="col-md-8 col-sm-8 panelrightside">
+									<h4 id="electronics" class="clothesclass">Clothes</h4>
+									<h2 id="pricetag" class="pricetag2">${{post.charges}}</h2>
+								</div>
+							</div>
+							</div>
+							<div class="panel-body"><center><h5>(Prices may vary depending on <br> local or internal <a id="taxlaws" href="#">Tax Laws</a>)</h5></center>
+								<div class="row">
+									<div class="col-md-12 col-sm-12 buttonrow">
+										<center><a href="#" class="buttontravel" data-toggle="modal" data-target="#myModal">Connect with traveller</a></center>
+									</div>
+								</div>
+								<div class="row">
+								<div class="col-md-12 col-sm-12 safetyrow">
+								<h4 class="safetyline">Safety Precations</h4>
+									<ul class="a listitem">
+  										<li>Lorum Ipsum</li>
+  										<li>Dolor Sit</li>
+  										<li>Amit</li>
+									</ul>
+								</div>
+								</div>
+							</div>
+							<div class="panel-footer pfooter">
+								<div class="row">
+									<center><h2> 650 Views </h2></center>
+									<hr id="hrid"> 
+								</div>
+								<div class="row">
+									<div class="col-md-5">
+										<i class="fa fa-flag-o fa-2x flagicon" aria-hidden="true"></i>
+									</div>
+									<div class="col-md-7">
+										<h4 id="reportuser" class="reportuser">Report User</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<ng-include src="'footer-small.html'"></ng-include>
+	

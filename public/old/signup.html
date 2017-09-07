@@ -1,0 +1,116 @@
+<div class="container-fluid" style="padding: 0px 0px 0px 0px;">
+    <ng-include src="'nav-light.html'"></ng-include>
+</div>
+<div class="container-fluid signmain">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <center>
+            <p class="signheading">Create a new account.</p>
+        </center>
+        <br>
+    </div>
+    <div class="row">
+        <div class="col-md-7">
+            <center>
+                <p class="uptext">Lorem ipsum dolor sit amet</p>
+                <br>
+                <p class="upsubtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <br>
+                <img src="img/signup.png" height="175px" width="300px">
+            </center>
+        </div>
+        <div class="col-md-5">
+            <div class="createbox">
+                <div class="row">
+
+                    <p style="color:red;" ng-show="emptyfields"><br/>Please fill in all the fields</p>
+                    <div class="row" style="padding-top: 8%;">
+                        <p class="formtag">Name</p>
+                    </div>
+                    <center style="margin-top: -2%;">
+                        <input type="text" name="title" id="nametag" placeholder="First Name" ng-model="user.fname">
+                        <input type="text" name="title" id="nametag" placeholder="Last Name" ng-model="user.lname">
+                    </center>
+
+                    <div class="row" style="padding-top: 5%;">
+                        <p class="formtag">E-mail</p>
+                    </div>
+                    <center style="margin-top: -2%;">
+                        <input type="text" name="title" id="signupform" ng-model="user.email">
+                    </center>
+
+                    <div class="row" style="padding-top: 5%;">
+                        <p class="formtag">Password</p>
+                    </div>
+                    <center style="margin-top: -2%;">
+                        <input type="password" name="title" id="signupform" ng-model="user.password">
+                    </center>
+
+                    <div class="row" style="padding-top: 5%;">
+                        <p class="formtag">Confirm Password</p>
+                    </div>
+                    <center style="margin-top: -2%;">
+                        <input type="tepasswordxt" name="title" id="signupform" ng-model="user.password2">
+                    </center>
+                    <p style="color:red; text-align: center;" ng-show="passwordmismatch"><br/>Passwords don't match!</p>
+
+                    <div class="row" style="padding-top: 5%;">
+                        <p class="formtag">Date of Birth</p>
+                    </div>
+                    <center style="margin-top: 2%; margin-left: -15%;">
+                        <input type="text" name="title" id="birthtag" placeholder="dd" ng-model="user.dob.dd">
+                        <input type="text" name="title" id="birthtag" placeholder="mm" ng-model="user.dob.mm">
+                        <input type="text" name="title" id="birthtag" placeholder="yyyy" ng-model="user.dob.yyyy">
+                    </center>
+                    <div class="row" style="padding-top: 5%;">
+                        <p class="formtag">Gender</p>
+                    </div>
+                    <div class="radio radio-danger">
+                        <input type="radio" name="radio2" id="radio3" value="male" ng-model="user.gender">
+                        <label for="radio3">
+                            Male
+                        </label>
+                    </div>
+                    <div class="radio radio-danger">
+                        <input type="radio" name="radio2" id="radio3" value="female" ng-model="user.gender">
+                        <label for="radio3">
+                            Female
+                        </label>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="row" style="padding-top: 5%;">
+                    <center>
+
+                        <button class="upbutton" ng-click="create(user)" style="border:none;">Next</button>
+                    </center>
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+<ng-include src="'footer-small.html'"></ng-include>
+
+<script type="text/javascript">
+    function changeState(el) {
+        if (el.readOnly) el.checked = el.readOnly = false;
+        else if (!el.checked) el.readOnly = el.indeterminate = true;
+    }
+</script>

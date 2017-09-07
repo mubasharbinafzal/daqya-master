@@ -1,0 +1,70 @@
+
+
+ <ng-include src="'nav.html'"></ng-include>
+        <div class="main-container">
+            <section class="text-center bg--secondary space--sm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-10 col-md-8">
+                            <h1>Upcoming Trips</h1>
+                            <p class="lead"> Send something on cheap rates. Use Daqya to find a messenger and send your parcel safely using our premium escrow service.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="masonry">
+                            <div class="masonry__container masonry--active">
+                                <div class="col-sm-4 masonry__item" ng-repeat="item in posts">
+                                    <div class="card card-1 boxed boxed--sm boxed--border">
+                                        <div class="card__top">
+                                            <div class="card__avatar">
+                                                <a href="#"> <img alt="Image" src="img/avatar-round-1.png"> </a> <span><strong>{{item.userName}}</strong></span></div>
+                                            <div class="card__meta"> <span>${{item.cost}}</span> </div>
+                                        </div>
+                                        <div class="card__body">
+                                            <br><br><br><br>
+    <!--                                        
+<iframe class="apmap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462568.93464355526!2d54.947905702215756!3d25.074096003401515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai+-+United+Arab+Emirates!5e0!3m2!1sen!2s!4v1493302569524" width="220" height="120" frameborder="0" allowfullscreen style="min-height: 200px !important;border:0"></iframe>
+-->
+
+                                            <p> Travelling from <b>{{item.depCountry}}</b> to <b>{{item.arrivalCountry}}</b></p>
+                                        </div>
+                                        <div class="card__bottom" style="text-align: center;">
+                                            
+                                          <a class="btn btn--primary type--uppercase" href="/#/post/{{item.id}}"><span class="btn__text">
+                            View Post
+                        </span></a>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+       <ng-include src="'footer.html'"></ng-include>
+
+        </div>
+
+            <script src="js/flickity.min.js"></script>
+            <script src="js/easypiechart.min.js"></script>
+            <script src="js/parallax.js"></script>
+            <script src="js/typed.min.js"></script>
+            <script src="js/datepicker.js"></script>
+            <script src="js/isotope.min.js"></script>
+            <script src="js/ytplayer.min.js"></script>
+            <script src="js/lightbox.min.js"></script>
+            <script src="js/granim.min.js"></script>
+            <script src="js/jquery.steps.min.js"></script>
+            <script src="js/countdown.min.js"></script>
+            <script src="js/twitterfetcher.min.js"></script>
+            <script src="js/spectragram.min.js"></script>
+            <script src="js/smooth-scroll.min.js"></script>

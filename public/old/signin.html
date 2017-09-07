@@ -1,0 +1,36 @@
+
+	<div class="container-fluid" style="padding: 0px 0px 0px 0px;">
+	 <ng-include src="'nav-light.html'"></ng-include>
+	</div>
+	<div class="container-fluid signmain">
+		<br><br><br><br><br><br>
+		<div class="row">
+			<center><p class="signheading">Sign in</p></center>
+			<br>
+		</div>
+		<center><div class="signbox">
+			<div class="row" style="padding-top: 10%;"><center><p class="signwelcome">Welcome Back!</p>
+<p style="color:red; text-align: center;" ng-show="error"><br/><br/>{{error}}<br/></p>
+
+			</center></div>
+			<div class="row">
+			<center style="padding-top: 10%;"> 
+                  <input type="text" name="title" id="signinform" placeholder="E-mail" ng-model="user.email">
+            </center>
+            <center style="padding-top: 5%;"> 
+                  <input type="password" name="title" id="signinform" placeholder="Password" ng-model="user.password">
+            </center>
+            </div>
+            <div class="row" style="padding-top: 2%;">
+            	<a class="signforgot" href="/#/">Forgot Password?</a>
+            </div>
+            <div class="row" style="padding-top: 5%;">
+            <center><button class="signcreatebutton" ng-click="signin(user)">Sign In</button></center>
+            </div>
+            <div class="row" style="padding-top: 5%;">
+            <center><p><span class="signendtext">or</span><br><a class="signendlink" href="/#/signup">Create Account</a><br><br><br>
+            </p></center></div>
+
+		</div><br><br><br><br><br><br><br></center>
+		</div>
+		<ng-include src="'footer-small.html'"></ng-include>

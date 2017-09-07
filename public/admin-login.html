@@ -1,0 +1,21 @@
+
+<div class="container" style="text-align: center; padding-top: 150px;">
+
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+   <h4>Daqya Executive Login<br/><br/></h4>
+   <h5 ng-show="error">Login details dont match our records. Try again.<br/><br/></h5>
+    <p>
+      <label>Email</label> 
+      <input id="email" class="form-control" type="email" ng-model="admin.email" required> 
+    </p>
+    <p>
+      <label>Password</label> 
+      <input id="password" class="form-control" type="password" ng-model="admin.password" required> 
+    </p>
+    <p>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="login(admin)">Login</button>
+    </p>
+  </div>
+  <div class="col-md-4"></div>
+</div>

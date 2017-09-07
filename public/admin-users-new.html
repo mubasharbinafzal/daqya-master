@@ -1,0 +1,80 @@
+<style type="text/css">body {background: none;}</style>
+
+<nav class="navbar navbar-fixed-top" style="background-color: black !important;">
+        <div class="navbar-header" style="padding: 10px;">
+          <div class="navbar-brand slink" href="#/" style="color: pink">Daqya Executive</div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav pull-right">
+            <li class="slink"><a href="#/admin" class="slink">Logout</a></li>
+          </ul>
+      </div>
+</nav>
+
+<ng-include src="'/admin-sidebar.html'"></ng-include>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-9 col-md-offset-1" style="margin-top: 100px">
+           
+              <h1 class="page-header">Create a New User</h1>
+          
+          <p><br/>You can create a new user here:</p>
+   <div class="col-md-4">
+
+   <h5 ng-show="success">
+     <div class="alert alert-success">
+      <strong>Success!</strong> User created.
+    </div>
+   </h5>
+    <p>
+      <label>First Name</label> 
+      <input id="name" class="form-control" type="text" ng-model="user.fname" required> 
+    </p>
+    <p>
+      <label>Last Name</label> 
+      <input id="name" class="form-control" type="text" ng-model="user.lname" required> 
+    </p>
+    <p>
+      <label>Phone</label> 
+      <input id="name" class="form-control" type="text" ng-model="user.phone" required> 
+    </p>
+    <p>
+      <label>City</label> 
+      <input id="name" class="form-control" type="text" ng-model="user.city" required> 
+    </p>
+    <p>
+      <label>Country</label> 
+      <input id="name" class="form-control" type="text" ng-model="user.country" required> 
+    </p>
+    <p>
+      <label>Address</label> 
+      <input id="name" class="form-control" type="text" ng-model="user.address" required> 
+    </p>
+    <p>
+      <label>Zip Code</label> 
+      <input id="name" class="form-control" type="text" ng-model="user.zip" required> 
+    </p>
+    <p>
+      <label>Gender</label> 
+      <input id="name" class="form-control" type="text" ng-model="user.gender" required> 
+    </p>
+    <p>
+      <label>Email</label> 
+      <input id="email" class="form-control" type="email" ng-model="user.email" required> 
+    </p>
+    <p>
+      <label>Password</label> 
+      <input id="password" class="form-control" type="password" ng-model="user.password" required> 
+      <input id="hidden" class="form-control" type="password" ng-model="user.password2" required> 
+    </p>
+    <p>
+      <button style="margin-top:20px" class="btn btn-primary" ng-click="create(user)">Create New User</button>
+      <button style="margin-top:20px" class="btn btn-default" ng-click="back()">Cancel</button>
+    </p>
+  </div>
+
+        </div>
+    </div>
+</div>

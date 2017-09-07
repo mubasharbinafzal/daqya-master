@@ -1,0 +1,67 @@
+
+ <ng-include src="'nav.html'"></ng-include>
+        <div class="main-container">
+            <section class="switchable">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-5">
+                            <div class="switchable__text">
+                                <h2>Welcome back!</h2> <span>Don't have an account? <a href="/#/signup">Sign Up</a></span>
+                                <hr class="short">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+
+                                        <input type="text" placeholder="Email Address" ng-model="user.email">
+                                        <input type="password" placeholder="Password" ng-model="user.password">
+
+                                        </div>
+
+                                        <div class="col-xs-12">
+
+
+
+                                        <div class="alert bg--error" ng-show="error">
+                                            <div class="alert__body">
+                                                <span>{{error}}</span>
+                                            </div>
+
+                                        </div>
+
+
+
+                                        <button type="submit" class="btn btn--primary" ng-click="signin(user)">Login</button> </div>
+
+
+
+
+                                        <!-- <hr>
+                                        <div class="col-xs-12"> <span class="type--fine-print">By signing up, you agree to the <a href="/#/">Terms of Service</a></span> </div> -->
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-5"> <img alt="Image" class="border--round box-shadow-shallow" src="http://businesstravel.tips/wp-content/uploads/2015/09/man-airport-smart-phone.jpg"> </div>
+                    </div>
+                </div>
+            </section>
+            
+
+       <ng-include src="'footer.html'"></ng-include>
+
+        </div>
+
+            <script src="js/flickity.min.js"></script>
+            <script src="js/easypiechart.min.js"></script>
+            <script src="js/parallax.js"></script>
+            <script src="js/typed.min.js"></script>
+            <script src="js/datepicker.js"></script>
+            <script src="js/isotope.min.js"></script>
+            <script src="js/ytplayer.min.js"></script>
+            <script src="js/lightbox.min.js"></script>
+            <script src="js/granim.min.js"></script>
+            <script src="js/jquery.steps.min.js"></script>
+            <script src="js/countdown.min.js"></script>
+            <script src="js/twitterfetcher.min.js"></script>
+            <script src="js/spectragram.min.js"></script>
+            <script src="js/smooth-scroll.min.js"></script>

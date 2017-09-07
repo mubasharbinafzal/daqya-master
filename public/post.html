@@ -1,0 +1,62 @@
+
+ <ng-include src="'nav.html'"></ng-include>
+        <div class="main-container">
+            <section class="text-center bg--secondary space--sm">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-10 col-md-8">
+                            <h1>From {{post.depCity}} to {{post.arrivalCity}}</h1>
+                            <p class="lead"> on the 13th August, 2017 </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="space--xs imagebg" data-gradient-bg="#4876BD,#5448BD,#8F48BD,#BD48B1">
+                <div class="container">
+                    <div class="row">
+                        <div class="cta cta--horizontal text-center-xs">
+                            <div class="col-sm-4">
+                                <h4>{{post.userName}} (Trusted User)</h4>
+                            </div>
+                            <div class="col-sm-5">
+                                <p class="lead"> Get in touch by sending a Ping </p>
+                            </div>
+                            <div class="col-sm-3 text-right text-center-xs">
+                                <a class="btn btn--primary type--uppercase" ng-click="opt()"> <span class="btn__text">
+                            Ping Now
+                        </span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="text-center" id="post">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-10 col-md-8">
+                            <h2>Information</h2>
+                            <p class="lead"> Item: {{post.item}}<br/>
+Cost: ${{post.cost}}<br/>
+From: {{post.depCity}}, {{post.depCountry}}<br/>
+To: {{post.arrivalCity}}, {{post.arrivalCountry}}<br/>
+Item: {{post.item}}<br/>
+Details: {{post.details}}<br/>
+
+                             </p>
+
+                        <!--    <div>
+     <iframe width="700" height="300" frameborder="0" src="https://www.bing.com/maps/embed?h=300&w=700&cp=33.884999999999984~71.875&lvl=3&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+     </iframe>
+     <div style="white-space: nowrap; text-align: center; width: 700px; padding: 6px 0;">
+        <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=33.884999999999984~71.875&amp;sty=r&amp;lvl=3&amp;FORM=MBEDLD">View Larger Map</a>
+            &nbsp; | &nbsp;
+            <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=33.884999999999984~71.875&amp;sty=r&amp;lvl=3&amp;rtp=~pos.33.884999999999984_71.875____&amp;FORM=MBEDLD">Get Directions</a>
+    </div>
+</div> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+       <ng-include src="'footer.html'"></ng-include>
+        </div>

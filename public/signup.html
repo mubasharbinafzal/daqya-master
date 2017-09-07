@@ -1,0 +1,118 @@
+
+ <ng-include src="'nav.html'"></ng-include>
+        <div class="main-container">
+            <section class="switchable">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-5">
+                            <div class="switchable__text">
+                                <h2>Create a Free Daqya Account</h2> <span>Already have an account? <a href="/#/signin">Sign In</a></span>
+                                <hr class="short">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+
+
+
+
+
+
+                        <input type="text" placeholder="Full Name" ng-model="user.fname">
+
+
+<!-- <div class="row" style="text-align: center;">
+    <div class="col-sm-6">
+        
+
+<div class="input-radio">
+    <span class="input__label">Male</span>
+    <input id="radio-1" type="radio" name="radio" value="male" />
+    <label for="radio-1"></label>
+</div>
+
+    </div>
+    <div class="col-sm-6">
+        
+
+<div class="input-radio">
+    <span class="input__label">Female</span>
+    <input id="radio-2" type="radio" name="radio" value="female" />
+    <label for="radio-2"></label>
+</div>
+
+    </div>
+
+</div> -->
+
+<!-- 
+
+<input type="text" name="title" id="birthtag" placeholder="dd" ng-model="user.dob.dd" style="width: 30%;">
+<input type="text" name="title" id="birthtag" placeholder="mm" ng-model="user.dob.mm" style="width: 30%;">
+<input type="text" name="title" id="birthtag" placeholder="yyyy" ng-model="user.dob.yyyy" style="width: 30%;">
+ -->
+                        <input type="text" placeholder="Email Address" ng-model="user.email">
+                        <input type="password" placeholder="Password" ng-model="user.password">
+                        <input type="password" placeholder="Confirm Password" ng-model="user.password2">
+
+
+                                        </div>
+
+
+
+
+
+
+                    
+                                        <div class="col-xs-12">
+
+
+
+                            <div class="alert bg--error" ng-show="passwordmismatch">
+                                <div class="alert__body">
+                                    <span>Passwords don't match. Try again.</span>
+                                </div>
+                                
+                            </div>
+                            <div class="alert bg--success" ng-show="success">
+                                <div class="alert__body">
+                                    <span>Account created successfully. Please login to continue.</span>
+                                </div>
+
+                            </div>
+
+
+                                        <button type="submit" class="btn btn--primary" ng-click="create(user)">Create Account</button> </div>
+
+
+
+
+                                        <hr>
+                                        <div class="col-xs-12"> <span class="type--fine-print">By signing up, you agree to the <a href="/#/">Terms of Service</a></span> </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-5"> <img alt="Image" class="border--round box-shadow-shallow" src="http://businesstravel.tips/wp-content/uploads/2015/09/man-airport-smart-phone.jpg"> </div>
+                    </div>
+                </div>
+            </section>
+            
+
+       <ng-include src="'footer.html'"></ng-include>
+
+        </div>
+
+            <script src="js/flickity.min.js"></script>
+            <script src="js/easypiechart.min.js"></script>
+            <script src="js/parallax.js"></script>
+            <script src="js/typed.min.js"></script>
+            <script src="js/datepicker.js"></script>
+            <script src="js/isotope.min.js"></script>
+            <script src="js/ytplayer.min.js"></script>
+            <script src="js/lightbox.min.js"></script>
+            <script src="js/granim.min.js"></script>
+            <script src="js/jquery.steps.min.js"></script>
+            <script src="js/countdown.min.js"></script>
+            <script src="js/twitterfetcher.min.js"></script>
+            <script src="js/spectragram.min.js"></script>
+            <script src="js/smooth-scroll.min.js"></script>

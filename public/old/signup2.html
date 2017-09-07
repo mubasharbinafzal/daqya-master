@@ -1,0 +1,75 @@
+<div class="container-fluid" style="padding: 0px 0px 0px 0px;">
+    <ng-include src="'nav-light.html'"></ng-include>
+</div>
+<div class="container-fluid signmain">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="setupbox">
+        <div class="row" style="margin-left: 4px;">
+            <div class="col-md-5">
+                <div class="row" style="padding-top: 10%; margin-left: 6%;">
+                    <p class="setupheading">Complete your setup.</p>
+                </div>
+            </div>
+            <p class="setupsubheading">Add your residential information</p>
+        </div>
+        <div class="row" style="padding-top: 5%;">
+            <div class="col-md-2">
+                <p class="address">Address</p>
+            </div>
+            <div class="col-md-10">
+                <input type="text" name="title" id="createinform" ng-model="user.address">
+            </div>
+        </div>
+        <div class="row" style="padding-top: 1%;">
+            <div class="col-md-2">
+                <p class="address">City</p>
+            </div>
+            <div class="col-md-10">
+                <input type="text" name="title" id="createinform" ng-model="user.city">
+            </div>
+        </div>
+        <div class="row" style="padding-top: 1%;">
+            <div class="col-md-2">
+                <p class="address">Country</p>
+            </div>
+            <div class="col-md-10">
+                <input type="text" name="title" id="createinform" ng-model="user.country">
+            </div>
+        </div>
+        <div class="row" style="padding-top: 1%;">
+            <div class="col-md-2">
+                <p class="address">Zip Code</p>
+            </div>
+            <div class="col-md-10">
+                <input type="text" name="title" id="createinform" style="width: 20%;" ng-model="user.zip">
+            </div>
+        </div>
+
+        <div class="row" style="padding-top: 3%; margin-left: 65px;">
+            <div class="col-md-12">
+                <p> <span class="upterms">By clicking 'Create Account' you agree to our</span>
+                    <span> <a href="#" class="uplinks">Terms of use</a></span> <span class="upterms">and</span> <span>
+				<a href="#" class="uplinks">Privacy Policy.</a></span>
+                </p>
+            </div>
+        </div>
+
+        <div class="row" style="padding-top: 5%;">
+            <div class="col-md-7"></div>
+            <div class="col-md-3"><a href="/#/signup-complete" class="uplinks">Skip step and create account</a>
+            </div>
+            <div class="col-md-2"><button class="upcreatebutton" ng-click="update(user)">Create Account</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+<ng-include src="'footer-small.html'"></ng-include>
